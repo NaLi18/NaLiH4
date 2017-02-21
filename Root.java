@@ -1,4 +1,9 @@
 import java.util.Scanner;
+/**
+ * The root class that calcylate the square root of a input number
+ * Na Li
+ * 2:45pm - 3:40pm, Monday
+ */
 public class Root{
   public static void main(String[] args){
     double number;
