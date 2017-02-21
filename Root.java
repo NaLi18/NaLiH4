@@ -24,5 +24,10 @@ public class Root{
         System.out.println(lastGuess+" is the square root of "+number1);
         System.out.println("The recrusive method was called " +iteration+" times");
       }
+    else{
+      iteration++;
+      number2 = lastGuess+ (number1/lastGuess);
+      babylonian(number1,0.5* number2,iteration,tolerate);
   }
+}
 }
