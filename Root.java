@@ -8,6 +8,11 @@ public class Root{
     Scanner keyboard = new Scanner(System.in);
     System.out.print("You want to get square root of: ");
     number = keyboard.nextDouble();
+    if(number <=0){
+      System.out.println("Your did not enter a vaild number, please innput again");
+      System.out.print("You want to get square root of: ");
+      number = keyboard.nextDouble();
+    }
   }
   public static void babylonian(double number1,double lastGuess,int iteration,double tolerate){
   }
