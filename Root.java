@@ -13,6 +13,8 @@ public class Root{
       System.out.print("You want to get square root of: ");
       number = keyboard.nextDouble();
     }
+    System.out.print("How many error you will tolerate in the square root estimation?:");
+    tolerate = keyboard.nextDouble();
   }
   public static void babylonian(double number1,double lastGuess,int iteration,double tolerate){
   }
