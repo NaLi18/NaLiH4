@@ -20,5 +20,9 @@ public class Root{
   }
   public static void babylonian(double number1,double lastGuess,int iteration,double tolerate){
     double number2 =0.0;
+    if(Math.abs(number1- lastGuess*lastGuess)<tolerate){
+        System.out.println(lastGuess+" is the square root of "+number1);
+        System.out.println("The recrusive method was called " +iteration+" times");
+      }
   }
 }
