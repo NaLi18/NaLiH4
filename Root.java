@@ -19,5 +19,6 @@ public class Root{
     babylonian(number,guess,iteration,tolerate);
   }
   public static void babylonian(double number1,double lastGuess,int iteration,double tolerate){
+    double number2 =0.0;
   }
 }
