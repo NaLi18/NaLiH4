@@ -16,6 +16,7 @@ public class Root{
     System.out.print("How many error you will tolerate in the square root estimation?:");
     tolerate = keyboard.nextDouble();
     guess = number*0.5;
+    babylonian(number,guess,iteration,tolerate);
   }
   public static void babylonian(double number1,double lastGuess,int iteration,double tolerate){
   }
