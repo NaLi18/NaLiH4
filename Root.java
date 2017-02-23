@@ -18,18 +18,30 @@ public class Root
     //Ask the user to input the number
     System.out.print("You want to get square root of: ");
     number = keyboard.nextDouble();
+    
+    //Call the check method
     number = check(number);
+    
     //Ask the user the tolerate
     System.out.print("How many error you will tolerate in the square root estimation?:");
     tolerate = keyboard.nextDouble();
+    
     //Pass the half of the number to the guess variable
     guess = number*0.5;
+    
     //Call the babylonian method that is the recrusive method
     babylonian(number,guess,iteration,tolerate);
   }
+  
+  /**
+   * The check method that checks wether the input number is valid, if not, ask the user to input again. 
+   * @param number The input number
+   * @return The valid number
+   */
   private static double check(double number){
     if(number >0)
     { 
+      //return the valid number
       return number;
     }
     else{
@@ -39,6 +51,7 @@ public class Root
       Scanner keyboard = new Scanner(System.in);
       System.out.print("You want to get square root of: ");
       number = keyboard.nextDouble();
+      // call itself until the input number is valid
       return check(number);
   }
   }
