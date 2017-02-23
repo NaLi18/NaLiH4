@@ -18,16 +18,7 @@ public class Root
     //Ask the user to input the number
     System.out.print("You want to get square root of: ");
     number = keyboard.nextDouble();
-    
-    if(number <=0)
-    { 
-      //Print a error message
-      //and ask the user to input the number again 
-      System.out.println("Your did not enter a vaild number, please innput again");
-      System.out.print("You want to get square root of: ");
-      number = keyboard.nextDouble();
-    }
-    
+    number = check(number);
     //Ask the user the tolerate
     System.out.print("How many error you will tolerate in the square root estimation?:");
     tolerate = keyboard.nextDouble();
@@ -36,7 +27,21 @@ public class Root
     //Call the babylonian method that is the recrusive method
     babylonian(number,guess,iteration,tolerate);
   }
-  
+  private static double check(double number){
+    if(number >0)
+    { 
+      return number;
+    }
+    else{
+      //Print a error message
+      //and ask the user to input the number again 
+      System.out.println("Your did not enter a vaild number, please innput again");
+      Scanner keyboard = new Scanner(System.in);
+      System.out.print("You want to get square root of: ");
+      number = keyboard.nextDouble();
+      return check(number);
+  }
+  }
   /**
    * The babylonian method that calculate the square root of the number and print it out.
    * it is a recurisive method that call itself inside the method
