@@ -72,7 +72,7 @@ public class Root
     //It prints out the message of the square root and the iteration of the recrusive method was called
     if(Math.abs(number1- lastGuess*lastGuess)<tolerate){
         System.out.println(lastGuess+" is the square root of "+number1);
-        System.out.println("The recrusive method was called " +iteration+" times");
+        System.out.println("The recrusive method called itself " +iteration+" times");
     }
     //Else statement that call the babylonian method 
     else{
